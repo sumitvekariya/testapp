@@ -23,14 +23,14 @@ export class AlbumsComponent implements OnInit {
     .subscribe(
       (data: any[]) => {
          this.temp = data;
+         
       }
-    )
+    );
 
-      this.mainservice.getAlbumData(this.route.snapshot.params['id'])
+    this.mainservice.getAlbumData(this.route.snapshot.params['id'])
         .subscribe(
         (data: any[]) => {
           this.albums = data;
-          console.log(this.albums);
         }
       );
   }

@@ -4,6 +4,5 @@ export class Photos {
         public albumId: number,
         public title: string,
         public url: string,
-        public thumbnailUrl: string
 ) { }
 }

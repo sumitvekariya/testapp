@@ -41,8 +41,8 @@
           <td>{{ album.id }}</td>
           <td>{{ album.userId }}</td>
           <td>{{ album.title }}</td>
-          <td>{{ temp.thumbnailUrl }}<td>
-            <a [routerLink]="['/photos', album.id]"><button class='btn btn-xs btn-flat btn-info'><i class='fa fa-sign-in'></i> Photos </button></a></td></tr>
+          <!-- <td><img [src] = "[album.thumbnailUrl]"><td> -->
+          <td>  <a [routerLink]="['/photos', album.id]"><button class='btn btn-xs btn-flat btn-info'><i class='fa fa-sign-in'></i> Photos </button></a></td></tr>
             
       </tbody>
     </table>
