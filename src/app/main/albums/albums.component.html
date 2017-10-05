@@ -12,8 +12,8 @@
     </div>
     <div class="navbar-collapse collapse" id="navbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="">Album</a></li>
+        <li><a [routerLink]="['']">Home</a></li>
+        <li><a [routerLink]="['albums/']">Album</a></li>
       </ul>
     </div>
   </div>
@@ -38,11 +38,11 @@
       </thead>
       <tbody id="div1">
         <tr *ngFor = "let album of albums">
-          <td>{{ user.id }}</td>
-          <td></td>
-          <td></td>
-          <td><td>
-            <a><button class='btn btn-xs btn-flat btn-info'><i class='fa fa-sign-in'></i> Photos </button></a></td></tr>
+          <td>{{ album.id }}</td>
+          <td>{{ album.userId }}</td>
+          <td>{{ album.title }}</td>
+          <td>{{ temp.thumbnailUrl }}<td>
+            <a [routerLink]="['/photos', album.id]"><button class='btn btn-xs btn-flat btn-info'><i class='fa fa-sign-in'></i> Photos </button></a></td></tr>
             
       </tbody>
     </table>

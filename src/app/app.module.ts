@@ -17,9 +17,11 @@ import { AlbumsComponent } from './main/albums/albums.component';
 import { PhotosComponent } from './photos/photos.component';
 
 const approutes: Routes = [
-  {path: '', component: MainComponent},
+  { path: '', component: MainComponent },
   { path: 'albums', component: AlbumsComponent },
-  { path: 'photos', component: PhotosComponent }
+  { path: 'albums/:id', component: AlbumsComponent },
+  { path: 'photos', component: PhotosComponent },
+  { path: 'photos/:id', component: PhotosComponent },
 ];
 
 @NgModule({

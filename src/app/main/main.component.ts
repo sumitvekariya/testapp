@@ -12,7 +12,6 @@ import { Album } from '../album.model';
 })
 export class MainComponent implements OnInit {
   users: Users[];
-  album: Album[];
   constructor(private mainservice: MainserviceService) { }
   
   ngOnInit() {
@@ -25,15 +24,7 @@ export class MainComponent implements OnInit {
       );
   }
 
-  onGetAlbums(id) {
-    this.mainservice.getAlbumData(id)
-      .subscribe(
-      (data: any[]) => {
-        this.album = data;
-        console.log(this.album);
-      }
-    );
-  }
+
   
 
 }
